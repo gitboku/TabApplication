@@ -19,6 +19,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"/>
 
+        <!--実際には表示されないView-->
+        <!--FragmentTabHost#sestup()で、ここにタブごとのコンテンツを挿入することを指定する-->
+        <!--idには好きな名前をいれる-->
         <FrameLayout
             android:id="@+id/tabcontent"
             android:layout_width="fill_parent"
