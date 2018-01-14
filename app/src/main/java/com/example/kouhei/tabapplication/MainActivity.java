@@ -15,22 +15,22 @@ public class MainActivity extends FragmentActivity {
 
         setContentView(R.layout.activity_main);
         mTabHost = (FragmentTabHost)findViewById(R.id.tabhost);
-        mTabHost.setup(this, getSupportFragmentManager(), R.id.tabcontent);
+        mTabHost.setup(this, getSupportFragmentManager(), R.id.tabContent);
 
         // "FragmenteTab"は自分で実装するクラス
         // addTab()の第一引数がTabSpec、第二引数は表示するFragmentをclass名で渡す。第三引数はFragmentで読み込むデータをBundleで渡す。
         // TabSpecはタブの情報
         // setIndicator()はタブのView
         mTabHost.addTab(
-                mTabHost.newTabSpec("tab1").setIndicator("Tab 1", null),
+                mTabHost.newTabSpec("tab1").setIndicator("Tab 1", getDrawable(R.drawable.ic_spa_black_24dp)),
                 FragmentTab.class,
                 null);
         mTabHost.addTab(
-                mTabHost.newTabSpec("tab2").setIndicator("Tab 2", null),
+                mTabHost.newTabSpec("tab2").setIndicator("Tab 2", getDrawable(R.drawable.ic_sentiment_satisfied_black_24dp)),
                 FragmentTab.class,
                 null);
         mTabHost.addTab(
-                mTabHost.newTabSpec("tab3").setIndicator("Tab 3", null),
+                mTabHost.newTabSpec("tab3").setIndicator("Tab 3", getDrawable(R.drawable.ic_android_black_24dp)),
                 FragmentTab.class,
                 null);
     }

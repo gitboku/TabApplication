@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.app.FragmentTabHost
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tabhost"
     android:layout_width="match_parent"
@@ -13,6 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!--"warap_content"←コンテンツをビュー内に収めるのに必要な最小サイズになる-->
         <TabWidget
             android:id="@+id/tabs"
             android:layout_width="fill_parent"
@@ -23,7 +23,7 @@
         <!--FragmentTabHost#sestup()で、ここにタブごとのコンテンツを挿入することを指定する-->
         <!--idには好きな名前をいれる-->
         <FrameLayout
-            android:id="@+id/tabcontent"
+            android:id="@+id/tabContent"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"/>
