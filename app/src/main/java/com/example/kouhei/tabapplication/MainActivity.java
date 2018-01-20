@@ -3,7 +3,7 @@ package com.example.kouhei.tabapplication;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
 import android.os.Bundle;
-import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.SupportMapFragment;
 
 public class MainActivity extends FragmentActivity {
     private FragmentTabHost mTabHost;
@@ -30,7 +30,7 @@ public class MainActivity extends FragmentActivity {
                 null);
         mTabHost.addTab(
                 mTabHost.newTabSpec("tab3").setIndicator("Tab 3", getDrawable(R.drawable.ic_android_black_24dp)),
-                MapFragment.class,
+                SupportMapFragment.class,
                 null);
     }
 }
