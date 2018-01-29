@@ -33,7 +33,8 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="${google_map_key}" />
+        <!-- ${label}のように書くと、build.gradle で設定した"manifestPlaceholders = [label: value]"が参照される -->
 
         <activity
             android:name=".MapsActivity"

@@ -14,6 +14,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [google_map_key: System.getenv("googleMapKey")]
+        }
+        debug {
+            // "manifestPlaceholders" ← AndroidManifest.xml内で動的に変数を設定するプロパティ
+            // 詳しくは https://developer.android.com/studio/build/manifest-build-variables.html
+            manifestPlaceholders = [google_map_key: System.getenv("googleMapKey")]
         }
     }
     productFlavors {
